@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapiMedics - Gestor Familiar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body  style="background-color:#E0CD95;">
+    <nav>
+        <ul class="navigation-menu">
+            <li><a href="Capi.html">Inicio</a></li>
+            <li><a href="GuiaRapida.html">Guias Rapidas</a></li>
+            <li><a href="GestorFam.html">Gestor Familiar</a></li>
+            <li><a href="EducacionPrev.html">Educacion Preventiva</a></li>
+        </ul>
+    </nav>
+
+    <div class="registro">
+        <h2>Registrar Integrante</h2>
+        <form id="formRegistro">
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <input type="text" id="sangre" placeholder="Tipo de sangre (Ej: O+, A-)" required>
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fechaNacimiento" required>
+            <textarea id="enfermedades" placeholder="Enfermedades crónicas"></textarea>
+            <textarea id="alergias" placeholder="Alergias"></textarea>
+            <label>
+                <input type="checkbox" id="usaMedicacion" onchange="toggleMedicacionInput()">
+                Depende de una medicación
+            </label>
+            <input type="text" id="medicacionDetalle" placeholder="¿Cuál medicamento?" style="display: none;">
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+
+    <div class="usuariosRegistrados">
+        <h2>Integrantes Registrados</h2>
+        <ul id="listaUsuarios"></ul>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+</html>
